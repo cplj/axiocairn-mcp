@@ -1,0 +1,34 @@
+# Axiocairn MCP
+
+> Retrieve published market research reports, their data dates, and their limitations through a hosted MCP server.
+
+Research information, not investment advice. Account authorization is required. Access follows account permissions. Client compatibility must be checked individually. Retrieval covers existing reports; report generation on request is not claimed here.
+
+## Connect
+
+- General Streamable HTTP endpoint: https://axiocairn.com/mcp
+- ChatGPT endpoint, verification pending: https://axiocairn.com/mcp/chatgpt
+- Grok endpoint, verification pending: https://axiocairn.com/mcp/grok
+- Muse endpoint, marked verified in the connection guide: https://axiocairn.com/mcp/muse
+- [Connection guide](https://axiocairn.com/en/assistant): current platform status and account authorization steps.
+
+## Tools
+
+After authorization, use tools/list for current names, descriptions and input schemas. Unauthenticated discovery returns an authorization error.
+
+- get_todays_reports: reports for today or a selected date.
+- get_latest_report_by_type: newest available report in a selected family.
+- search_report_archive: find published reports; report_type sample selects samples.
+- get_report_schedule: expected times, time zone and recorded generation times.
+- get_symbol_reports: list existing ticker reports, then retrieve a selected type. If a report is not available yet, the response says so and, where your plan allows, may offer to prepare it. Availability is rolling out.
+- get_house_view: this week's weekly report and next expected publication date.
+
+Preserve report links, data dates, missing fields and limitations. Expected publication times do not establish availability. Weekends and market holidays retain the latest trading day's data; today's report may be absent. Reader is the free tier, with limited look-ups, delayed briefs and limited history.
+
+## Documentation
+
+- [README](https://github.com/cplj/axiocairn-mcp/blob/main/README.md): configuration templates, tool reference and limits.
+- [Metadata](https://github.com/cplj/axiocairn-mcp/blob/main/server.json): com.axiocairn/mcp and the hosted remote; metadata does not establish a Registry listing.
+- [Service status](https://axiocairn.com/en/status): timing and known gaps.
+- [Terms](https://axiocairn.com/en/terms): report content licensing.
+- [Disclosure](https://axiocairn.com/en/disclaimer): research limits.

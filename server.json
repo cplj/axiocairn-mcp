@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.axiocairn/mcp",
+  "title": "Axiocairn MCP",
+  "description": "Read published market research reports, data dates, schedules, and limitations.",
+  "version": "0.1.0",
+  "websiteUrl": "https://axiocairn.com/en/assistant",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://axiocairn.com/mcp"
+    }
+  ]
+}

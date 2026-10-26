@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.env.*
+*.log
+*.pem
+*.key
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.mcp.json
+claude_desktop_config.json
+.cursor/
+.gemini/

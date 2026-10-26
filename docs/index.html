@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Connect AI agents to published Axiocairn research reports, data dates, schedules, and limitations.">
+  <title>Axiocairn MCP</title>
+  <style>
+    :root { color-scheme: light; font: 17px/1.65 system-ui, sans-serif; color: #182c31; background: #f5f3ec; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { color: #125e69; text-underline-offset: .18em; }
+    a:focus-visible { outline: 3px solid #125e69; outline-offset: 4px; }
+    .skip { position: absolute; left: 1rem; top: -5rem; }
+    .skip:focus { top: 1rem; background: white; padding: .5rem; }
+    header, main, footer { max-width: 980px; margin: auto; padding: 2rem 1.5rem; }
+    header { border-bottom: 1px solid #ced4ce; }
+    nav { display: flex; flex-wrap: wrap; gap: 1.3rem; }
+    h1 { font-size: clamp(2.6rem, 8vw, 4.8rem); line-height: 1.05; letter-spacing: -.04em; margin: 1.8rem 0 1rem; }
+    h2 { font-size: 1.5rem; line-height: 1.3; margin-top: 2.5rem; }
+    .intro { max-width: 700px; font-size: 1.2rem; }
+    .endpoint { padding: 1rem; border: 1px solid #b8c9c4; background: #e9efea; overflow-wrap: anywhere; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    @media (min-width: 780px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    article { background: #fffef9; border: 1px solid #d4d9d1; padding: 1.2rem; }
+    h3 { margin-top: 0; font-size: 1.05rem; }
+    code { font-size: .9em; overflow-wrap: anywhere; }
+    li { margin-bottom: .65rem; }
+    footer { border-top: 1px solid #ced4ce; font-size: .9rem; }
+    .label { text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header>
+    <nav aria-label="Documentation">
+      <a href="https://github.com/cplj/axiocairn-mcp/blob/main/README.md">Setup and reference</a>
+      <a href="https://github.com/cplj/axiocairn-mcp/blob/main/README.zh-Hant.md" lang="en" hreflang="zh-Hant">Traditional Chinese</a>
+      <a href="https://axiocairn.com/en/status">Service status</a>
+    </nav>
+    <p class="label">Hosted research connection</p>
+    <h1>Axiocairn MCP</h1>
+    <p class="intro">Retrieve published market research reports, their data dates, and their limitations from your AI agent.</p>
+  </header>
+  <main id="content">
+    <h2>For AI agents</h2>
+    <p class="endpoint">Streamable HTTP endpoint<br><code>https://axiocairn.com/mcp</code></p>
+    <p>Authorize your Axiocairn account in the client, then request <code>tools/list</code> for the current tool descriptions and input schemas. Keep the report link, data date, missing fields, and limitations in the answer.</p>
+    <p>The <a href="https://axiocairn.com/en/assistant">published connection guide</a> marks Muse as verified. Claude, ChatGPT, Grok, and the general endpoint remain pending; Cursor and Gemini CLI are not listed as verified. Configuration templates are available in the setup reference.</p>
+    <div class="grid">
+      <article><h3>ChatGPT</h3><code>https://axiocairn.com/mcp/chatgpt</code><p>Connection verification pending.</p></article>
+      <article><h3>Grok</h3><code>https://axiocairn.com/mcp/grok</code><p>Connection verification pending.</p></article>
+      <article><h3>Muse</h3><code>https://axiocairn.com/mcp/muse</code><p>Marked verified in the published guide.</p></article>
+    </div>
+    <h2>Choose the question</h2>
+    <ul>
+      <li><code>get_todays_reports</code>: find reports for today or a specified date.</li>
+      <li><code>get_latest_report_by_type</code>: read the newest available report in a selected family.</li>
+      <li><code>search_report_archive</code>: find published reports or samples.</li>
+      <li><code>get_report_schedule</code>: check expected times and generation records.</li>
+      <li><code>get_symbol_reports</code>: list existing ticker reports, then retrieve a selected type.</li>
+      <li><code>get_house_view</code>: check this week's House View and its next expected date.</li>
+    </ul>
+    <p>Example: “What reports are available for today, and what are their data dates?” Tool discovery requires authorization. The server's current response governs availability.</p>
+    <h2>Account access and data time</h2>
+    <p>Sign in once when prompted and review the requested access. Reader is the free tier, with limited look-ups, delayed briefs, and limited history. Access follows your account permissions; see the <a href="https://axiocairn.com/en/subscribe">current plan details</a>.</p>
+    <p>Check each report's data cutoff separately from its publication date. Weekends and market holidays retain the latest trading day's data, so today's report may be absent. Expected publication times do not establish availability.</p>
+    <h2>Scope and limits</h2>
+    <p>This repository provides documentation and metadata for a hosted service. It does not include the server implementation. It describes retrieval of existing reports and makes no claim that report generation on request is available. The connection does not place trades or manage accounts.</p>
+    <p>Registry name: <code>com.axiocairn/mcp</code>. The metadata uses the <a href="https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json">official 2025-12-11 schema</a>. Metadata here does not establish a Registry listing.</p>
+    <p>Axiocairn provides research information, not investment advice. Content is general, is not personalized, and is not a recommendation to buy or sell. Reports may be incomplete or delayed. Models cannot predict future outcomes. Investing involves the risk of loss. Verify information independently and read the <a href="https://axiocairn.com/en/disclaimer">full disclosure</a>.</p>
+  </main>
+  <footer>
+    <p>Axiocairn Authors · <a href="https://github.com/cplj/axiocairn-mcp/blob/main/LICENSE">MIT license</a> for this repository · Report content follows the <a href="https://axiocairn.com/en/terms">service terms</a>.</p>
+    <p>Client names belong to their respective owners. Axiocairn is not affiliated with or endorsed by those companies. Security reports: <a href="mailto:contact@axiocairn.com">contact@axiocairn.com</a>.</p>
+  </footer>
+</body>
+</html>
