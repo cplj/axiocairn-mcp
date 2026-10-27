@@ -12,3 +12,7 @@ node_modules/
 claude_desktop_config.json
 .cursor/
 .gemini/
+dist/
+build/
+*.egg-info/
+__pycache__/
