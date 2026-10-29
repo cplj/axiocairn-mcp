@@ -4,18 +4,64 @@ Axiocairn MCP lets AI agents retrieve published market research reports, their d
 
 [Traditional Chinese](README.zh-Hant.md) · [Connection guide](https://axiocairn.com/en/assistant) · [Service status](https://axiocairn.com/en/status)
 
+<img src="docs/media/claude-logo.svg" alt="Claude" width="112" height="24">
+
+Works with Claude (claude.ai web).
+
+Every published report is free to read this week, through November 1 (ET). From November 2, access follows your plan.
+
+## 30-second demo
+
+The following descriptions summarize answers from ChatGPT and Claude through the Axiocairn connector, recorded on October 27, 2026.
+
+**1. The agent finds the reports** (ChatGPT)
+
+ChatGPT, using the Axiocairn connector, answers "List the Axiocairn reports available to me" with a table of 26 readable reports from October 19–27, 2026, covering the Pre-Market Brief, Midday Brief, Closing Wrap, Model Desk Daily, Weekly House View and Stock Model Assessments, with the AAPL and NVDA editions flagged as historical.
+
+**2. It states the data date** (Claude)
+
+Asked for the data date of the latest report, Claude says it is 2026-10-27 and today's edition, lists the four daily reports with that date, and notes the weekly House View is dated Monday, October 26.
+
+**3. It lists the limits** (Claude)
+
+Claude lists the limits Axiocairn states: no forecasts, no advice, no buy or sell calls, no guaranteed performance, no account management, a research method is not proof, and readers must verify; it adds that Company Research and Event Study are still marked "coming soon."
+
+## Try it in 60 seconds
+
+1. In your AI app, add a custom connector named Axiocairn with this address. For ChatGPT, use the ChatGPT address in the table below.
+
+   ```text
+   https://axiocairn.com/mcp
+   ```
+
+2. Sign in with Google or GitHub when asked.
+3. Ask:
+
+   ```text
+   What Axiocairn reports are available today?
+   ```
+
+   ```text
+   What is the data date of the latest Axiocairn report you can see, and is it today's edition?
+   ```
+
+   ```text
+   In a few short bullets, what are the limits of Axiocairn reports?
+   ```
+
 ## For AI agents
 
 Connect to the hosted server at **https://axiocairn.com/mcp** using Streamable HTTP and the account authorization flow. No local server installation is needed.
 
-| Entry | URL | Published connection status |
+| Client | URL | Connection status |
 | --- | --- | --- |
-| General MCP | https://axiocairn.com/mcp | Verification pending |
-| ChatGPT | https://axiocairn.com/mcp/chatgpt | Verification pending |
+| Claude (claude.ai web) | https://axiocairn.com/mcp | Verified on 2026-10-27 |
+| ChatGPT (web) | https://axiocairn.com/mcp/chatgpt | Verified on 2026-10-27 |
 | Grok | https://axiocairn.com/mcp/grok | Verification pending |
-| Muse | https://axiocairn.com/mcp/muse | Verified in the connection guide |
+| Muse | https://axiocairn.com/mcp/muse | Verification pending |
+| Other MCP clients (Claude Code, Cursor, Gemini CLI) | https://axiocairn.com/mcp | Verification pending |
 
-These are deployed, account-protected endpoints. A listed URL alone does not establish client compatibility. The [connection guide](https://axiocairn.com/en/assistant) is the current source for connection status. The examples below are configuration templates; they do not establish a successful connection in each client.
+"Verified" means we added the connector, authorized an account, and got answers to report questions in that client on the date shown. These are deployed, account-protected endpoints. A listed URL alone does not establish client compatibility. The examples below are configuration templates; they do not establish a successful connection in each client.
 
 After authorization, request `tools/list` for the current tool names, descriptions, and input schemas. This minimal `tools/call` request asks for report timing:
 
@@ -37,7 +83,7 @@ Keep the report link, data date, missing fields, and limitations in the answer. 
 
 ### Claude
 
-Claude's connection remains pending in the published guide. For Claude Code, the [official remote HTTP configuration](https://code.claude.com/docs/en/mcp) supports this template using the general endpoint:
+On claude.ai, open Customize → Connectors → Add custom connector, name it Axiocairn, and use `https://axiocairn.com/mcp`. This was verified on October 27, 2026. Claude Code has not been verified. For Claude Code, the [official remote HTTP configuration](https://code.claude.com/docs/en/mcp) supports this template using the general endpoint:
 
 ```sh
 claude mcp add --transport http axiocairn https://axiocairn.com/mcp
@@ -47,7 +93,7 @@ Complete the client's authorization flow if offered. This command describes conf
 
 ### ChatGPT
 
-Use these values in a custom connector. Connection verification is pending.
+Use these values in a custom connector. This was verified in ChatGPT on the web on October 27, 2026.
 
 ```text
 Name: Axiocairn
@@ -90,7 +136,7 @@ Gemini CLI is not listed as verified in Axiocairn's published guide. This templa
 
 ### Muse
 
-The published guide marks Muse as verified. Add a custom connector with these values:
+Muse verification is pending. Add a custom connector with these values:
 
 ```text
 Name: Axiocairn

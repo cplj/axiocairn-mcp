@@ -1,11 +1,7 @@
 # Changelog
 
-## 0.1.0 - 2026-10-25
+One line per update, newest first.
 
-- Added English and Traditional Chinese connection documentation.
-- Added hosted MCP entry points, configuration templates, and a tool reference.
-- Documented account authorization, the free Reader tier, data dates, and market closures.
-- Added remote server metadata using the official 2025-12-11 schema.
-- Added a static documentation page, security reporting instructions, and the MIT license.
-
-Client configuration templates do not establish verified compatibility. Metadata in this repository does not establish a Registry listing.
+- 2026-10-27: Added a 30-second demo, a 60-second trial and updated connection status (Claude and ChatGPT verified on the web; others pending) in both READMEs, the docs page and llms.txt.
+- 2026-10-27: Added minimal packages and a release workflow to reserve the PyPI names.
+- 2026-10-25: First release: English and Traditional Chinese connection documentation, hosted MCP entry points, configuration templates, tool reference, remote server metadata (2025-12-11 schema), static documentation page, security reporting instructions and the MIT license.

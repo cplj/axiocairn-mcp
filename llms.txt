@@ -6,11 +6,11 @@ Research information, not investment advice. Account authorization is required. 
 
 ## Connect
 
-- General Streamable HTTP endpoint: https://axiocairn.com/mcp
-- ChatGPT endpoint, verification pending: https://axiocairn.com/mcp/chatgpt
+- General Streamable HTTP endpoint, verified in claude.ai web on 2026-10-27: https://axiocairn.com/mcp
+- ChatGPT endpoint, verified in ChatGPT web on 2026-10-27: https://axiocairn.com/mcp/chatgpt
 - Grok endpoint, verification pending: https://axiocairn.com/mcp/grok
-- Muse endpoint, marked verified in the connection guide: https://axiocairn.com/mcp/muse
-- [Connection guide](https://axiocairn.com/en/assistant): current platform status and account authorization steps.
+- Muse endpoint, verification pending: https://axiocairn.com/mcp/muse
+- [Connection guide](https://axiocairn.com/en/assistant): setup and account authorization steps.
 
 ## Tools
 
