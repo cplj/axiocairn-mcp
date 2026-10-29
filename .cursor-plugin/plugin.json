@@ -1,0 +1,11 @@
+{
+  "name": "axiocairn",
+  "description": "Access Axiocairn investment research through a remote MCP server. Account authorization is required; Cursor connection verification is pending.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Axiocairn Team"
+  },
+  "homepage": "https://axiocairn.com",
+  "repository": "https://github.com/cplj/axiocairn-mcp",
+  "license": "MIT"
+}

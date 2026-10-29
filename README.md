@@ -104,6 +104,10 @@ Review the account authorization screen before approving access. Follow the [con
 
 ### Cursor
 
+[Add to Cursor](https://cursor.com/en/install-mcp?name=axiocairn&config=eyJ1cmwiOiJodHRwczovL2F4aW9jYWlybi5jb20vbWNwIn0%3D)
+
+Review the server configuration in Cursor before installing. When prompted, sign in to Axiocairn and review the OAuth authorization screen (the account access approval step). No API key belongs in this configuration.
+
 The [Cursor MCP documentation](https://cursor.com/docs/context/mcp) describes remote server entries in `mcp.json`. Merge this entry into the existing `mcpServers` object without replacing other servers:
 
 ```json

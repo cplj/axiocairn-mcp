@@ -104,6 +104,10 @@ Connector URL: https://axiocairn.com/mcp/chatgpt
 
 ### Cursor
 
+[加入 Cursor（Add to Cursor）](https://cursor.com/en/install-mcp?name=axiocairn&config=eyJ1cmwiOiJodHRwczovL2F4aW9jYWlybi5jb20vbWNwIn0%3D)
+
+安裝前先在 Cursor 確認伺服器設定。出現授權提示時，登入 Axiocairn 並確認 OAuth 授權畫面（批准帳號存取的步驟）。此設定不需要填入 API 金鑰。
+
 [Cursor MCP 文件](https://cursor.com/docs/context/mcp)說明如何在 `mcp.json` 設定遠端伺服器。請將下列項目合併至既有的 `mcpServers`，保留其他伺服器設定：
 
 ```json
