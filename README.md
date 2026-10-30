@@ -1,5 +1,7 @@
 # Axiocairn MCP
 
+[Research & Learning](https://axiocairn.com/en/research) publishes exploratory papers and research notes with their methods and limitations; tutorials are coming on November 6, 2026.
+
 Axiocairn MCP lets AI agents retrieve published market research reports, their data dates, and their limitations.
 
 [Traditional Chinese](README.zh-Hant.md) · [Connection guide](https://axiocairn.com/en/assistant) · [Service status](https://axiocairn.com/en/status)
