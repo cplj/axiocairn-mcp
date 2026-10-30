@@ -1,5 +1,7 @@
 # Axiocairn MCP
 
+[研究與學習](https://axiocairn.com/zh-hant/research)公開探索性論文與研究筆記的方法和限制；教程預計於 2026 年 11 月 6 日推出。
+
 Axiocairn MCP 讓 AI 助理讀取已發布的市場研究報告、資料日期與限制。
 
 [English](README.md) · [連線指南](https://axiocairn.com/zh-hant/assistant) · [服務狀態](https://axiocairn.com/zh-hant/status)
