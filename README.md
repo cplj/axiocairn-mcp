@@ -10,22 +10,6 @@ Works with Claude (claude.ai web).
 
 Every published report is free to read this week, through November 1 (ET). From November 2, access follows your plan.
 
-## 30-second demo
-
-The following descriptions summarize answers from ChatGPT and Claude through the Axiocairn connector, recorded on October 27, 2026.
-
-**1. The agent finds the reports** (ChatGPT)
-
-ChatGPT, using the Axiocairn connector, answers "List the Axiocairn reports available to me" with a table of 26 readable reports from October 19–27, 2026, covering the Pre-Market Brief, Midday Brief, Closing Wrap, Model Desk Daily, Weekly House View and Stock Model Assessments, with the AAPL and NVDA editions flagged as historical.
-
-**2. It states the data date** (Claude)
-
-Asked for the data date of the latest report, Claude says it is 2026-10-27 and today's edition, lists the four daily reports with that date, and notes the weekly House View is dated Monday, October 26.
-
-**3. It lists the limits** (Claude)
-
-Claude lists the limits Axiocairn states: no forecasts, no advice, no buy or sell calls, no guaranteed performance, no account management, a research method is not proof, and readers must verify; it adds that Company Research and Event Study are still marked "coming soon."
-
 ## Try it in 60 seconds
 
 1. In your AI app, add a custom connector named Axiocairn with this address. For ChatGPT, use the ChatGPT address in the table below.
