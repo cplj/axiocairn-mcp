@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "axiocairn-mcp"
 version = "0.0.1"
-description = "Connection details for the Axiocairn MCP server (hosted market-research MCP)"
+description = "Connection details for the Axiocairn MCP server (hosted MCP for holdings exposure, scenarios and published research)"
 readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"

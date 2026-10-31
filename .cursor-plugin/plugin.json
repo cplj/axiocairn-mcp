@@ -1,6 +1,6 @@
 {
   "name": "axiocairn",
-  "description": "Access Axiocairn investment research through a remote MCP server. Account authorization is required; Cursor connection verification is pending.",
+  "description": "Check holdings exposure, run what-if scenarios, estimate trading cost and capacity, and read published research through a remote MCP server. Account authorization is required; Cursor connection verification is pending.",
   "version": "1.0.0",
   "author": {
     "name": "Axiocairn Team"

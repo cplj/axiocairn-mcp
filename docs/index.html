@@ -40,7 +40,7 @@
     </nav>
     <p class="label">Hosted research connection</p>
     <h1>Axiocairn MCP</h1>
-    <p class="intro">Retrieve published market research reports, their data dates, and their limitations from your AI agent.</p>
+    <p class="intro">Check holdings exposure, run what-if scenarios, estimate trading cost and capacity, review backtest discipline, and read published research reports with their data dates and limits, from your AI assistant.</p>
   </header>
   <main id="content">
     <h2>For AI agents</h2>
@@ -54,20 +54,13 @@
       <article><h3>Muse</h3><code>https://axiocairn.com/mcp/muse</code><p>Connection verification pending.</p></article>
     </div>
     <h2>Choose the question</h2>
-    <ul>
-      <li><code>get_todays_reports</code>: find reports for today or a specified date.</li>
-      <li><code>get_latest_report_by_type</code>: read the newest available report in a selected family.</li>
-      <li><code>search_report_archive</code>: find published reports or samples.</li>
-      <li><code>get_report_schedule</code>: check expected times and generation records.</li>
-      <li><code>get_symbol_reports</code>: list existing ticker reports, then retrieve a selected type.</li>
-      <li><code>get_house_view</code>: check this week's House View and its next expected date.</li>
-    </ul>
-    <p>Example: “What reports are available for today, and what are their data dates?” Tool discovery requires authorization. The server's current response governs availability.</p>
+    <p>Areas covered: holdings exposure and what-if scenarios; trading cost and capacity; backtest discipline and data-quality checks; saved daily-close conditions; published research reports, schedules and the weekly House View; help topics and plan details. The authorized <code>tools/list</code> response is the authority for tool names and descriptions.</p>
+    <p>Example: “What reports are available for today, and what are their data dates?” Tool discovery requires authorization.</p>
     <h2>Account access and data time</h2>
     <p>Sign in once when prompted and review the requested access. Reader is the free tier, with limited look-ups, delayed briefs, and limited history. Access follows your account permissions; see the <a href="https://axiocairn.com/en/subscribe">current plan details</a>.</p>
     <p>Check each report's data cutoff separately from its publication date. Weekends and market holidays retain the latest trading day's data, so today's report may be absent. Expected publication times do not establish availability.</p>
     <h2>Scope and limits</h2>
-    <p>This repository provides documentation and metadata for a hosted service. It does not include the server implementation. It describes retrieval of existing reports and makes no claim that report generation on request is available. The connection does not place trades or manage accounts.</p>
+    <p>This repository provides documentation and metadata for a hosted service. It does not include the server implementation. The connection analyzes holdings you provide, stores the daily-close conditions you set, and reads existing reports. Where your plan allows, it can request a new stock model assessment, which uses generation allowance. Company research and event research are not generated on request yet. It does not place trades or manage accounts.</p>
     <p>Registry name: <code>com.axiocairn/mcp</code>. The metadata uses the <a href="https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json">official 2025-12-11 schema</a>. Metadata here does not establish a Registry listing.</p>
     <p>Axiocairn provides research information, not investment advice. Content is general, is not personalized, and is not a recommendation to buy or sell. Reports may be incomplete or delayed. Models cannot predict future outcomes. Investing involves the risk of loss. Verify information independently and read the <a href="https://axiocairn.com/en/disclaimer">full disclosure</a>.</p>
   </main>

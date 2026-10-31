@@ -2,7 +2,7 @@
 
 [Research & Learning](https://axiocairn.com/en/research) publishes exploratory papers and research notes with their methods and limitations; tutorials are coming on November 6, 2026.
 
-Axiocairn MCP lets AI agents retrieve published market research reports, their data dates, and their limitations.
+Axiocairn MCP lets an AI assistant check holdings exposure, run what-if scenarios, estimate trading cost and capacity, review backtest discipline, and read published research reports with their data dates and limits.
 
 [Traditional Chinese](README.zh-Hant.md) · [Connection guide](https://axiocairn.com/en/assistant) · [Service status](https://axiocairn.com/en/status)
 
@@ -10,7 +10,7 @@ Axiocairn MCP lets AI agents retrieve published market research reports, their d
 
 Works with Claude (claude.ai web).
 
-Every published report is free to read this week, through November 1 (ET). From November 2, access follows your plan.
+Access follows your plan.
 
 ## Try it in 60 seconds
 
@@ -137,16 +137,34 @@ Follow the [Muse guide](https://axiocairn.com/en/muse), authorize the account, a
 
 ## Tool reference
 
-Tool discovery requires account authorization. Use the authorized server's `tools/list` response as the authority for the tools available to your connection; unauthenticated discovery returns an authorization error.
+Tool discovery requires account authorization. Use the authorized server's `tools/list` response as the authority for the tools available to your connection; unauthenticated discovery returns an authorization error. Some tools are limited by plan.
 
-| Tool | When to use it |
+| Tool | What it does |
 | --- | --- |
-| `get_todays_reports` | Find reports for today or a specified date, including the availability of the weekly House View. |
+| `analyze_holdings` | Review pasted holdings: exposures, sector concentration and a linked SPY stress estimate. |
+| `check_portfolio` | Concentration, daily volatility, correlation and SPY beta of a basket. |
+| `what_if` | Apply a stress scenario, an SPY move or a weight change to a prior holdings result. |
+| `estimate_cost_capacity` | Estimate the cost of a hypothetical order and the size a stock or ETF can absorb. |
+| `calculate_options` | Descriptive Black-Scholes-Merton prices and Greeks from dated historical inputs. |
+| `check_backtest_discipline` | List supplied trial counts, multiple-testing adjustment and train/test gaps. |
+| `check_idea` | Turn a symbol, direction and horizon into a falsifiable statement with its evidence gaps. |
+| `get_screen` | Compare one symbol across dated simulated-position lists: listed, not listed, missing. |
+| `get_bench_result` | Read a queued calculation by job_id: result, chart data and interpretation guide. |
+| `get_data_quality` | Dataset dates, missing observations, duplicate rows and source-version changes. |
+| `get_alerts` | Read recorded comparisons against limits you defined. |
+| `get_alert_conditions` | Read your saved daily-close conditions and their versions. |
+| `set_alert_condition` | Save or disable one daily-close condition; sends no notification. |
+| `get_todays_reports` | Find reports for today or a given date, including the weekly House View. |
 | `get_latest_report_by_type` | Retrieve the newest available report in a selected report family. |
-| `search_report_archive` | Find published reports by type, date, ticker, or language. Use `report_type: "sample"` for sample reports. |
-| `get_report_schedule` | Check expected report times, the schedule's time zone, and recorded generation times. |
-| `get_symbol_reports` | List existing reports for a ticker, then retrieve the selected report type. If a report is not available yet, the response says so and, where your plan allows, may offer to prepare it. Availability is rolling out. |
-| `get_house_view` | Check this week's House View and the next expected publication date; missing editions are identified. |
+| `search_report_archive` | Find published reports by type, date, ticker or language; samples are labelled. |
+| `search_reports` | Search existing reports by ticker, date range and category. |
+| `get_symbol_reports` | List the existing reports for a ticker, then retrieve the one you pick. |
+| `get_house_view` | This week’s House View, or the next expected publication date. |
+| `get_report_schedule` | Expected report times, time zone and recorded generation times. |
+| `get_usage_guide` | Which report categories exist, what each is for and what generation costs in allowance. |
+| `list_guides` | List help-center topics. |
+| `get_guide` | Return one full help-center entry. |
+| `get_plans` | Plans, allowances and how to upgrade, from the website plan settings. |
 
 ## Sign in once and start with Reader
 
@@ -180,7 +198,7 @@ References: [official format specification](https://github.com/modelcontextproto
 
 This repository contains documentation and connection metadata for a hosted service. It does not contain the server implementation or grant access to restricted reports. The MIT license covers this repository; report content remains subject to the [service terms](https://axiocairn.com/en/terms).
 
-Access depends on account permissions, allowances, client support, and service availability. Reports may be incomplete or delayed. Retrieval covers existing reports; this documentation makes no claim that report generation on request is available. The connection reads research and does not place trades or manage accounts.
+Access depends on account permissions, allowances, client support, and service availability. Reports may be incomplete or delayed. The connection analyzes holdings you provide, stores the daily-close conditions you set, and reads existing reports. Where your plan allows, it can request a new stock model assessment, which uses generation allowance. Company research and event research are not generated on request yet. It does not place trades or manage accounts.
 
 Axiocairn provides research information, not investment advice. Content is general, is not personalized, and is not a recommendation to buy or sell. Models cannot predict future outcomes. Investing involves the risk of loss. Verify information independently and read the [full disclosure](https://axiocairn.com/en/disclaimer).
 

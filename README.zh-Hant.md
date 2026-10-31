@@ -2,7 +2,7 @@
 
 [研究與學習](https://axiocairn.com/zh-hant/research)公開探索性論文與研究筆記的方法和限制；教程預計於 2026 年 11 月 6 日推出。
 
-Axiocairn MCP 讓 AI 助理讀取已發布的市場研究報告、資料日期與限制。
+Axiocairn MCP 讓 AI 助理檢視持倉曝險、跑假設情境、估算交易成本與容量、檢查回測紀律，並讀取已發布的研究報告，附資料日期與限制。
 
 [English](README.md) · [連線指南](https://axiocairn.com/zh-hant/assistant) · [服務狀態](https://axiocairn.com/zh-hant/status)
 
@@ -10,7 +10,7 @@ Axiocairn MCP 讓 AI 助理讀取已發布的市場研究報告、資料日期�
 
 相容於 Claude（claude.ai 網頁版）。
 
-本週（至美東 11 月 1 日）所有已發布報告免費開放閱讀，11 月 2 日起依方案。
+存取依方案而定。
 
 ## 60 秒試用
 
@@ -137,16 +137,34 @@ Connector URL: https://axiocairn.com/mcp/muse
 
 ## 工具參考
 
-取得工具清單需要帳號授權。請以授權後伺服器回傳的 `tools/list` 為準，確認該連線可用的工具；未授權的查詢會收到授權錯誤。
+工具探索需要帳戶授權。請以授權後伺服器回傳的 `tools/list` 為準；未授權的探索會收到授權錯誤。部分工具依方案限制。
 
-| 工具 | 使用時機 |
+| 工具 | 做什麼 |
 | --- | --- |
-| `get_todays_reports` | 查詢今天或指定日期的報告，並確認當週 House View 是否可用。 |
-| `get_latest_report_by_type` | 讀取指定報告家族中最新可用的一份。 |
-| `search_report_archive` | 依類型、日期、股票代號或語言查詢已發布報告。範例報告使用 `report_type: "sample"`。 |
-| `get_report_schedule` | 查詢報告預定時間、時程時區與已記錄的生成時間。 |
-| `get_symbol_reports` | 先列出某股票代號的既有報告，再讀取選定類型。若尚無該報告，回覆會明說；依方案可能提供按需準備，功能陸續開放。 |
-| `get_house_view` | 查詢當週 House View 與下次預定發布日期；缺少版本時會明確指出。 |
+| `analyze_holdings` | 檢視貼上的持倉：曝險、產業集中度與連動的 SPY 壓力估計。 |
+| `check_portfolio` | 一籃部位的集中度、日波動、相關性與 SPY beta。 |
+| `what_if` | 對既有持倉結果套用壓力情境、SPY 變動或權重調整。 |
+| `estimate_cost_capacity` | 估算假設下單的成本，以及股票或 ETF 能承接的金額。 |
+| `calculate_options` | 以有日期的歷史輸入計算描述性的 Black-Scholes-Merton 價格與 Greeks。 |
+| `check_backtest_discipline` | 列出使用者提供的試驗次數、多重檢定折減與訓練／測試設定缺口。 |
+| `check_idea` | 把代號、方向與期間改寫成可被推翻的陳述，並列出證據缺口。 |
+| `get_screen` | 並列同一代號在有日期的模擬持倉清單中的讀數：列入、未列入、缺漏。 |
+| `get_bench_result` | 以 job_id 讀取排隊中的計算結果、圖表資料與解讀說明。 |
+| `get_data_quality` | 資料集日期、缺漏觀測、重複列與來源版本變動。 |
+| `get_alerts` | 讀取依你設定的上限所記錄的比較結果。 |
+| `get_alert_conditions` | 讀取你儲存的收盤條件與其版本。 |
+| `set_alert_condition` | 儲存或停用一個收盤條件；不發送通知。 |
+| `get_todays_reports` | 查今天或指定日期的報告，包括每週觀點。 |
+| `get_latest_report_by_type` | 取得指定報告類別中最新的一份。 |
+| `search_report_archive` | 依類別、日期、代號或語言找已發布報告；範例會標示。 |
+| `search_reports` | 依代號、日期範圍與類別搜尋已有報告。 |
+| `get_symbol_reports` | 列出某代號已有的報告，再取得你選的那份。 |
+| `get_house_view` | 本週每週觀點，或下一個預計發布日期。 |
+| `get_report_schedule` | 預計報告時間、時區與已記錄的生成時間。 |
+| `get_usage_guide` | 報告類別、各自用途與新生成所需額度。 |
+| `list_guides` | 列出說明中心主題。 |
+| `get_guide` | 回傳單一說明項目的完整內容。 |
+| `get_plans` | 方案、額度與升級方式，與網站方案設定同源。 |
 
 ## 登入一次，從 Reader 開始
 
@@ -180,7 +198,7 @@ Reader 是免費層，提供有限的股票查詢、延遲的市場簡報與有�
 
 本目錄提供託管服務的文件與連線中繼資料，不包含伺服器實作，也不授予受限報告的存取權。MIT 授權適用於本目錄；報告內容另依[服務條款](https://axiocairn.com/zh-hant/terms)。
 
-存取取決於帳號權限、額度、客戶端支援與服務可用性。報告可能不完整或延遲。讀取範圍為既有報告；本文件未宣稱可依請求生成報告。連線用於讀取研究，不下單，也不管理帳戶。
+存取取決於帳號權限、額度、客戶端支援與服務可用性。報告可能不完整或延遲。連線可分析你提供的持倉、儲存你設定的收盤條件，並讀取已有報告；方案允許時，可請求新生成個股模型評估，並扣除生成額度。公司研究與事件研究尚未開放依請求生成。連線不下單，也不管理帳戶。
 
 Axiocairn 提供研究資訊，不構成投資建議（research information, not investment advice）。內容為一般性資訊，並非個人化建議，也不是買賣推薦。模型無法預測未來結果。投資涉及損失風險。請獨立核實資訊，並閱讀[完整揭露](https://axiocairn.com/zh-hant/disclaimer)。
 

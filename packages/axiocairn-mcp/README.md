@@ -1,6 +1,6 @@
 # axiocairn-mcp
 
-Connection details for the **Axiocairn MCP server**, a hosted service that lets AI agents retrieve published market research reports, their data dates and their limitations.
+Connection details for the **Axiocairn MCP server**, a hosted service that lets an AI assistant check holdings exposure, run what-if scenarios, estimate trading cost and capacity, review backtest discipline, and read published research reports with their data dates and limits.
 
 This package contains no server code and no research content. Run `axiocairn-mcp` to print the endpoint and the connection guide.
 
