@@ -6,6 +6,22 @@ Axiocairn MCP 讓 AI 助理檢視持倉曝險、跑假設情境、估算交易�
 
 [English](README.md) · [連線指南](https://axiocairn.com/zh-hant/assistant) · [服務狀態](https://axiocairn.com/zh-hant/status)
 
+## 一個真實問題，一份實際輸出
+
+> 「我持有 50% NVDA、30% MSFT、20% SPY，對大盤的曝險有多高？」
+
+| 讀數 | 數值 |
+|---|---|
+| 最大持股 | NVDA，50% |
+| 科技股直接權重（NVDA＋MSFT） | 80% |
+| 集中度（HHI） | 0.38 |
+| 每日波動 | 1.58% |
+| 對 SPY 的 beta | 1.47 |
+| SPY 下跌日的 beta（252 日中 121 日） | 1.58 |
+| 與 SPY 的相關係數：NVDA／MSFT | 0.66／0.39 |
+
+資料日 2026-10-30。觀察區間 2025-10-30 至 2026-10-30，252 筆每日報酬，授權市場資料。這是固定權重的模擬持倉，不是真實帳戶，也不是建議。讀數描述三檔在這段期間的共同變動，不是預測。80% 只計兩檔直接持有的科技股，未穿透 SPY 的成分。
+
 <img src="docs/media/claude-logo.svg" alt="Claude" width="112" height="24">
 
 相容於 Claude（claude.ai 網頁版）。

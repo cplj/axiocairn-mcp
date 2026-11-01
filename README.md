@@ -6,6 +6,22 @@ Axiocairn MCP lets an AI assistant check holdings exposure, run what-if scenario
 
 [Traditional Chinese](README.zh-Hant.md) · [Connection guide](https://axiocairn.com/en/assistant) · [Service status](https://axiocairn.com/en/status)
 
+## A real question, a real output
+
+> "I hold 50% NVDA, 30% MSFT, 20% SPY. How exposed am I to the market?"
+
+| Reading | Value |
+|---|---|
+| Largest position | NVDA, 50% |
+| Technology, direct weights (NVDA + MSFT) | 80% |
+| Concentration (HHI) | 0.38 |
+| Daily volatility | 1.58% |
+| Beta to SPY | 1.47 |
+| Beta on SPY down days (121 of 252) | 1.58 |
+| Correlation with SPY: NVDA / MSFT | 0.66 / 0.39 |
+
+Data date 2026-10-30. Window 2025-10-30 to 2026-10-30, 252 daily returns, licensed market data. This is a simulated holding with fixed weights, not an account and not advice. The readings describe how the three symbols moved together in that window, not a forecast. The 80% counts only the two direct technology positions, not what SPY holds.
+
 <img src="docs/media/claude-logo.svg" alt="Claude" width="112" height="24">
 
 Works with Claude (claude.ai web).
