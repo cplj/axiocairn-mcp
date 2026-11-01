@@ -1,0 +1,44 @@
+name: Client connection report
+description: Tell us what happened when you connected a client
+labels: ["connection"]
+body:
+  - type: input
+    id: client
+    attributes:
+      label: Client and version
+      placeholder: Claude web, ChatGPT web, Cursor 2.x, Gemini CLI ...
+    validations:
+      required: true
+  - type: input
+    id: endpoint
+    attributes:
+      label: Endpoint used
+      placeholder: https://axiocairn.com/mcp
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date and time zone
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: How far did you get
+      options:
+        - Could not add the connector
+        - Added, but sign-in failed
+        - Signed in, tools did not load
+        - Tools loaded, a call failed
+        - Everything worked
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: What you saw
+      description: Exact error text, with any account details removed.
+  - type: markdown
+    attributes:
+      value: Do not paste credentials, tokens or restricted report content.

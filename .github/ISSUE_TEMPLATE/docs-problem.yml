@@ -1,0 +1,24 @@
+name: Documentation problem
+description: A wrong, outdated or unclear statement in this repository
+labels: ["documentation"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: File or section
+      placeholder: README.md, "Client configuration"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or unclear
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested wording (optional)
+  - type: markdown
+    attributes:
+      value: Do not paste credentials, account details or restricted report content.
