@@ -2,7 +2,9 @@
 
 [Research & Learning](https://axiocairn.com/en/research) publishes exploratory papers and research notes with their methods and limitations; tutorials are coming on November 6, 2026.
 
-Axiocairn MCP lets an AI assistant check holdings exposure, run what-if scenarios, estimate trading cost and capacity, review backtest discipline, and read published research reports with their data dates and limits.
+Hedge-fund risk checks for your holdings: beta, concentration, scenarios, research.
+
+Review where portfolio risk is concentrated before comparing hypothetical changes. Axiocairn measures holdings concentration, historical volatility and SPY beta, an estimate of sensitivity to SPY. Conditional scenarios show results under stated assumptions; they do not forecast returns. Results depend on the data window, coverage and assumptions, and historical relationships can change. Dated published research is also available within the signed-in account’s access. Some calculations and report generation use account allowance. Confirm the inputs and allowance use before requesting calculations or new reports. Saving, changing or deleting alert conditions, research plans or scenarios requires the applicable access and user agreement. Use synthetic or nonidentifying inputs. No brokerage connection or trade execution is provided. Results are for general research reference. Not personalized, not investment advice, and not a recommendation to buy or sell.
 
 [Traditional Chinese](README.zh-Hant.md) · [Connection guide](https://axiocairn.com/en/assistant) · [Service status](https://axiocairn.com/en/status)
 
